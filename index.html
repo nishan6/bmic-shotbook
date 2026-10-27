@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BMIC 2026 · Shot Breakdown</title>
+<meta name="description" content="Scripted-moment shot breakdown for the BMIC 2026 Grand Finals broadcast.">
+<meta name="theme-color" content="#080e24">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath fill='%23d6b878' d='M8 46 4 15l18 16L32 8l10 23 18-16-4 31Z'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Saira+Condensed:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="wordmark" href="#top" aria-label="BMIC 2026 shot breakdown, back to top">
+    <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M8 46 4 15l18 16L32 8l10 23 18-16-4 31Z"/></svg>
+    <b>BMIC 2026</b> <span class="muted">Shot breakdown</span>
+  </a>
+  <div class="day-filter" role="group" aria-label="Filter segments by show day">
+    <button type="button" data-day="all" aria-pressed="true">All days</button>
+    <button type="button" data-day="1" aria-pressed="false">Day 1</button>
+    <button type="button" data-day="2" aria-pressed="false">Day 2</button>
+    <button type="button" data-day="3" aria-pressed="false">Day 3</button>
+  </div>
+  <button type="button" class="print-btn" onclick="window.print()">Print / PDF</button>
+</header>
+
+<div class="layout">
+  <nav class="sidenav" aria-label="Sections" id="sidenav"></nav>
+  <main id="top">
+    <section class="hero" id="hero"></section>
+    <div class="strip" aria-hidden="true"><i></i><i></i><i></i></div>
+    <section class="block" id="cameras"></section>
+    <section class="block" id="layout"></section>
+    <section class="block" id="seating"></section>
+    <div id="segments"></div>
+    <section class="closing" id="closing"></section>
+  </main>
+</div>
+
+<div class="lightbox" id="lightbox" hidden role="dialog" aria-modal="true" aria-label="Media preview">
+  <button type="button" class="lightbox-close" aria-label="Close preview">×</button>
+  <div class="lightbox-body" id="lightbox-body"></div>
+</div>
+
+<script src="data.js"></script>
+<script src="media-manifest.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
